@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "683109c3-a7a8-4145-b147-57b6fc32c553",
+		"name": "Cannex API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33402061",
+		"_collection_link": "https://tongla.postman.co/workspace/Hunter~f3b68998-9a44-48fc-8ba5-5dada0979fa4/collection/33402061-683109c3-a7a8-4145-b147-57b6fc32c553?action=share&source=collection_link&creator=33402061"
+	},
+	"item": [
+		{
+			"name": "Newsroom",
+			"item": [
+				{
+					"name": "list pagination",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/newsrooms?pagination[withCount]=true&pagination[pageSize]=6&pagination[page]=1&sort[0]:desc=createdAt&populate=image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"newsrooms"
+							],
+							"query": [
+								{
+									"key": "pagination[withCount]",
+									"value": "true"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "6"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "1"
+								},
+								{
+									"key": "sort[0]:desc",
+									"value": "createdAt"
+								},
+								{
+									"key": "populate",
+									"value": "image"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/newsrooms?filters[title][$containsi]=HC",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"newsrooms"
+							],
+							"query": [
+								{
+									"key": "filters[title][$containsi]",
+									"value": "HC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get draft by slag id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/newsrooms?filters[slug][$eq]=cannex-launches-thc-free-cbd-line-2&status=draft",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"newsrooms"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "cannex-launches-thc-free-cbd-line-2"
+								},
+								{
+									"key": "status",
+									"value": "draft"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by slag id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/newsrooms?filters[slug][$eq]=cannex-launches-thc-free-cbd-line-2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"newsrooms"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "cannex-launches-thc-free-cbd-line-2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "list pagination",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/events?pagination[withCount]=true&pagination[pageSize]=6&pagination[page]=1&sort[0]:desc=createdAt&populate=image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"events"
+							],
+							"query": [
+								{
+									"key": "pagination[withCount]",
+									"value": "true"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "6"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "1"
+								},
+								{
+									"key": "sort[0]:desc",
+									"value": "createdAt"
+								},
+								{
+									"key": "populate",
+									"value": "image"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/events?filters[title][$containsi]=HC",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"events"
+							],
+							"query": [
+								{
+									"key": "filters[title][$containsi]",
+									"value": "HC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get draft by slag id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/events?filters[slug][$eq]=cannex-partners-with-the-thai-government&status=draft",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"events"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "cannex-partners-with-the-thai-government"
+								},
+								{
+									"key": "status",
+									"value": "draft"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by slag id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/events?filters[slug][$eq]=cannex-launches-thc-free-cbd-line-2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"events"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "cannex-launches-thc-free-cbd-line-2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get hightlight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/highlight?populate[events][fields][0]=title",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"highlight"
+							],
+							"query": [
+								{
+									"key": "populate[events][fields][0]",
+									"value": "title"
+								},
+								{
+									"key": "populate[events][fields][1]",
+									"value": "description",
+									"disabled": true
+								},
+								{
+									"key": "populate[events][fields][2]",
+									"value": "publishedAt",
+									"disabled": true
+								},
+								{
+									"key": "populate[events][populate][image][fields][0]",
+									"value": "url",
+									"disabled": true
+								},
+								{
+									"key": "populate[events][populate][image][fields][1]",
+									"value": "alternativeText",
+									"disabled": true
+								},
+								{
+									"key": "populate",
+									"value": "events",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact Form",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"firstname\": \"tongla\",\n        \"lastname\": \"dev\",\n        \"email\": \"twutthikunprapan@gmail.com\",\n        \"reason\": \"test reason\",\n        \"message\": \"test message\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/contact-forms",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contact-forms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Web Config",
+			"item": [
+				{
+					"name": "get contact config",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/config",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get contact form config",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/contact-form-config",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contact-form-config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get seo form page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/seo?populate[0]=homepage&populate[homepage][populate][metaImage][fields][0]=*",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"seo"
+							],
+							"query": [
+								{
+									"key": "populate[0]",
+									"value": "homepage"
+								},
+								{
+									"key": "populate[homepage][populate][metaImage][fields][0]",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get random events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/events/random?limit=3&populate[image][populate][fields][0]=url",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"random"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "populate[image][populate][fields][0]",
+									"value": "url"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get random newsrooms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/newsrooms/random?limit=3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"newsrooms",
+								"random"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
