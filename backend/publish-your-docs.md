@@ -184,7 +184,7 @@ You need to install docker service in Virtual Machine
     --name cannex-backend \
     --env-file .env \
     -p 1337:1337 \
-    -v $(pwd)/public/uploads:/app/public/uploads \
+    -v $(pwd)/public/uploads:/public/uploads \
     cannex-backend
 ```
 
