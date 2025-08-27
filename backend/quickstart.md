@@ -109,6 +109,9 @@ DATABASE_SSL=false
 * If you set follow by document you can use storage environment follow by `example.env`
 
 ```sh
+# Upload
+UPLOAD_PROVIDER=s3
+
 # S3 storage config
 S3_PUBLIC_URL=http://localhost:9000/cannex
 S3_ROOT_PATH=uploader
