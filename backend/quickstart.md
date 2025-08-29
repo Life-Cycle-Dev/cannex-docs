@@ -79,9 +79,9 @@ This project required S3 Storage Object like [R2](https://www.cloudflare.com/dev
 DATABASE_CLIENT=postgres
 DATABASE_HOST=localhost
 DATABASE_PORT=5432
-DATABASE_NAME=
-DATABASE_USERNAME=root
-DATABASE_PASSWORD=root
+DATABASE_NAME=cannex
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=postgres
 DATABASE_SSL=false
 ```
 
